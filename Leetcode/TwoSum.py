@@ -1,3 +1,6 @@
+from operator import index
+
+
 def twoSum(nums, target):
     result = {}
     for index, number in enumerate(nums):
@@ -9,4 +12,21 @@ def twoSum(nums, target):
 
 nums = [2, 7, 11, 15]
 target = 9
-print(twoSum(nums, target))
+# print(twoSum(nums, target))
+
+
+def twoSum1(nums, target):
+    for number in nums:
+        second_number = target - number
+        if second_number in nums:
+            return nums.index(number), nums.index(second_number)
+        else:
+            return 'Numbers with the target sum could not be found'
+
+print(twoSum1(nums, target))
+
+
+
+
+
+
